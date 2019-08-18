@@ -20,6 +20,9 @@
  *.rar
  .idea
  *.iml
+ *.bin
+ *.lock
+ *.class
  .gradle
  .DS_Store
  */out/
