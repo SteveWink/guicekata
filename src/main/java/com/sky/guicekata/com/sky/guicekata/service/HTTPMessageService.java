@@ -10,9 +10,7 @@ public class HTTPMessageService implements MessageService{
     private String username;
     private String password;
 
-    public HTTPMessageService(){
-        this("host", 1, "protocol", "steve", "password");
-    }
+
 
     public HTTPMessageService(String host, int port, String protocol, String username, String password) {
         this.host = host;
