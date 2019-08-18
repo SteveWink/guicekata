@@ -33,4 +33,10 @@
  .idea/compiler.xml
  build/
  .gradle/
- .idea/
+ .idea/**/
+gradlew
+gradlew.bat
+.gradle/**/
+build/**/
+gradle/**/
+.idea/**/
