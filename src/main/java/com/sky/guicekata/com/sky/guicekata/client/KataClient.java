@@ -1,13 +1,15 @@
 package com.sky.guicekata.com.sky.guicekata.client;
 
+import com.google.inject.Inject;
 import com.sky.guicekata.com.sky.guicekata.service.MessageService;
 
 public class KataClient {
 
     private final MessageService messageService;
 
-    public KataClient(){
-        messageService = new MessageService("myhost", 9000, "HTTP", "steve", "password");
+    @Inject
+    public KataClient(MessageService messageService){
+        this.messageService = messageService;
 
     }
 
