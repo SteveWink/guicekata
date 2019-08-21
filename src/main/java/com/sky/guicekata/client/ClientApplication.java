@@ -1,8 +1,8 @@
-package com.sky.guicekata.com.sky.guicekata.client;
+package com.sky.guicekata.client;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.sky.guicekata.com.sky.guicekata.service.MessageService;
+import com.sky.guicekata.service.MessageService;
 
 public class ClientApplication {
 
@@ -20,7 +20,8 @@ public class ClientApplication {
     public void doStuff(){
         Injector injector = Guice.createInjector(new KataModule());
         System.out.println("Done");
-        MessageService messageService = injector.getInstance(MessageService.class);
-        messageService.sendMessage("Hello", "world");
+        KataClient kataClient = injector.getInstance(KataClient.class);
+        kataClient.doSomethingWithData("lololol", "Chris");
+
     }
 }

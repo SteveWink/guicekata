@@ -1,6 +1,6 @@
-package com.sky.guicekata.com.sky.guicekata.client;
+package com.sky.guicekata.client;
 
-import com.sky.guicekata.com.sky.guicekata.service.HTTPMessageService;
+import com.sky.guicekata.service.HTTPMessageService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,8 +13,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-@ExtendWith(MockitoExtension.class)
 
+@ExtendWith(MockitoExtension.class)
 public class KataClientTest {
 
     @Mock
@@ -22,7 +22,6 @@ public class KataClientTest {
 
     @InjectMocks
     private KataClient kataClient;
-
 
     @BeforeEach
     public  void doSetup(){
@@ -32,11 +31,9 @@ public class KataClientTest {
     @Test
     void doSomethingWithDataSendsMessageToRecipient() {
         // given
-
         when(messageService.sendMessage(any(),any())).thenReturn(true);
 
         // when
-
         kataClient.doSomethingWithData("testData", "testPerson");
 
         // then
